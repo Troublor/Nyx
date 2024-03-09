@@ -1,0 +1,14 @@
+/python3/
+/venv/
+/build/
+/out/
+
+# temporary
+dataset*/
+tmp*
+examples*
+playground*
+*.pdf
+*.txt
+*.dot
+*.json

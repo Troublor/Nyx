@@ -1,0 +1,5 @@
+import logging
+
+TRACE_LEVEL = 9
+TRACE_LEVEL_TEXT = "TRACE"
+logging.addLevelName(TRACE_LEVEL, TRACE_LEVEL_TEXT)

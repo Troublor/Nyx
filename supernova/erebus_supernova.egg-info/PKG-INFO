@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: erebus-supernova
+Version: 1.0.0
+Summary: Supernova Project
+Author-email: William Aaron Cheung <reachout@troublor.xyz>
+Requires-Python: ~=3.10
+Description-Content-Type: text/markdown
+Requires-Dist: crytic-compile
+Requires-Dist: slither-analyzer@ git+https://github.com/Troublor/slither.git
+Requires-Dist: solc-select
+Requires-Dist: scipy
+Requires-Dist: z3-solver
+Requires-Dist: pylint
+Requires-Dist: black
+Requires-Dist: black[d]
+Requires-Dist: web3
+Requires-Dist: networkx
+Requires-Dist: structlog

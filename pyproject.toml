@@ -1,0 +1,40 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["supernova"]
+
+[project]
+name = "erebus-supernova"
+version = "1.0.0"
+authors = [
+    { name = "William Aaron Cheung", email = "reachout@troublor.xyz" },
+]
+description = "Supernova Project"
+readme = "README.md"
+requires-python = "~=3.10"
+dependencies = [
+    "crytic-compile",
+    "slither-analyzer @ git+https://github.com/Troublor/slither.git", # get rid of bug: https://github.com/crytic/slither/issues/1610
+    "solc-select",
+    "scipy",
+    "z3-solver",
+    "pylint",
+    "black",
+    "black[d]",
+    "web3",
+    "networkx",
+    "structlog",
+]
+
+[tool.black]
+target-version = ["py310"]
+[tool.pylint.messages_control]
+ignore = ["build", "python3", "dataset-tmp"]
+disable = [
+    "missing-module-docstring",
+    "missing-class-docstring",
+    "missing-function-docstring",
+    "invalid-name",
+]
