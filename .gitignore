@@ -10,7 +10,6 @@ dataset*/
 tmp*
 examples*
 playground*
-*.pdf
 *.txt
 *.dot
 *.json
