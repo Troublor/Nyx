@@ -6,7 +6,7 @@ from slither.core.declarations import FunctionContract, Modifier, SolidityFuncti
 from slither.core.declarations.function_top_level import FunctionTopLevel
 
 from lib.graph import LabelledGraph
-from supernova.lib.token import is_token_transfer_fn
+from nyx.lib.token import is_token_transfer_fn
 
 
 class MsgCallGraph(LabelledGraph[FunctionContract, str]):

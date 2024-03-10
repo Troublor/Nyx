@@ -4,6 +4,7 @@ from slither.core.declarations import SolidityVariable, Contract, Enum
 from slither.core.solidity_types import ArrayType, ElementaryType, UserDefinedType
 from slither.core.variables.local_variable import LocalVariable
 from slither.core.variables.state_variable import StateVariable
+from slither.core.variables.top_level_variable import TopLevelVariable
 from slither.core.variables.variable import Variable
 from slither.slithir.operations import (
     Member,
@@ -272,6 +273,8 @@ class Env:
             v = TupleVar(var)
         elif isinstance(var, Contract):
             v = self.state.load_contract(var)
+        elif isinstance(var, TopLevelVariable):
+            v = Var(var)
         else:
             print(type(var))
             raise NotImplementedError(var)

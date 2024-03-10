@@ -169,7 +169,11 @@ class HybridFlowGraph(object):
 
         for contract in self.analyze_contracts:
             for fn in contract.functions + contract.modifiers:
-                if fn.visibility in ["public", "external"] and fn.is_implemented:
+                if (
+                    fn.visibility in ["public", "external"]
+                    and fn.is_implemented
+                    and fn.canonical_name.startswith(contract.name)
+                ):
                     entry, returns, _, _ = self.__process_fn([], fn)
                     # add entry edge
                     self.__add_flows(
@@ -453,6 +457,10 @@ class HybridFlowGraph(object):
             if isinstance(n, NodeBlock)
             and isinstance(n.node.function, FunctionContract)
             and n.node.function.contract in self.analyze_contracts
+            and any(
+                n.node.function.canonical_name.startswith(contract.name)
+                for contract in self.analyze_contracts
+            )
             and n.node.type == NodeType.ENTRYPOINT
             and n.node.function.visibility in ["public", "external"]
             and n.node.function.is_implemented

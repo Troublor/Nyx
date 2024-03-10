@@ -1,7 +1,9 @@
 /python3/
 /venv/
+/.venv/
 /build/
 /out/
+__pycache__/
 
 # temporary
 dataset*/

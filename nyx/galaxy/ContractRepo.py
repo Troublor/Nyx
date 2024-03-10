@@ -58,6 +58,7 @@ class CryticCompileRepo(ContractRepo):
             # noinspection PyTypeChecker
             self._crytic_compile = CryticCompile(
                 self.root.__str__(),
+                skip_clean=True,
                 # foundry_out_directory="forge-out",
                 # foundry_ignore_compile=True,
             )

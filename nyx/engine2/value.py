@@ -172,6 +172,8 @@ def type_to_sort(typ: Type | list[Type] | str) -> z3.SortRef | list[z3.SortRef]:
     :param typ:
     :return:
     """
+    if isinstance(typ, TypeAlias):
+        typ = typ.type
     if isinstance(typ, str):
         typ = ElementaryType(typ)
     if isinstance(typ, ElementaryType):

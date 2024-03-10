@@ -4,8 +4,8 @@ from typing import List, Generator
 from slither.core.declarations import FunctionContract
 
 from hfg.hybrid_flow_graph import HybridFlowGraph
-from supernova.galaxy.ContractRepo import ContractRepoRaw
-from supernova.hfg.msg_call_graph import MsgCallGraph
+from nyx.galaxy.ContractRepo import ContractRepoRaw
+from nyx.hfg.msg_call_graph import MsgCallGraph
 
 
 class ContractGroup(object):

@@ -2,9 +2,9 @@ import json
 from pathlib import Path
 from typing import TypedDict
 
-from supernova.galaxy.ContractGroup import ContractGroup
-from supernova.galaxy.ContractRepo import ContractRepoRaw
-from supernova.lib.types import Hash, Address
+from nyx.galaxy.ContractGroup import ContractGroup
+from nyx.galaxy.ContractRepo import ContractRepoRaw
+from nyx.lib.types import Hash, Address
 
 
 class AttackMetadata(TypedDict):

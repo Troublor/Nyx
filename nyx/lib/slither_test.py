@@ -1,7 +1,7 @@
 import unittest
 
-from supernova.lib.slither_util import is_compatible
-from supernova.lib.test_util import TestSourceCode
+from nyx.lib.slither_util import is_compatible
+from nyx.lib.test_util import TestSourceCode
 
 
 class SlitherUtil(unittest.TestCase):

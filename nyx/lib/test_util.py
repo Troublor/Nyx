@@ -5,7 +5,7 @@ from crytic_compile import CryticCompile
 from slither.slither import Slither
 
 from galaxy.ContractRepo import AstTransformer
-from supernova.lib.solidity import get_solc_path
+from nyx.lib.solidity import get_solc_path
 
 
 class TestSourceCode(object):

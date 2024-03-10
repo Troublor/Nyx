@@ -12,7 +12,7 @@ from analyze.config import Config
 from analyze.group import AnalyzeGroup
 from analyze.observe import Observer
 from engine2.controller import UnknownCallHandleStrategy
-from galaxy.ContractRepo import ContractRepoRaw
+from galaxy.ContractRepo import ContractRepoRaw, CryticCompileRepo
 from lib.log import *
 from lib.signal import register_interrupt_handler
 

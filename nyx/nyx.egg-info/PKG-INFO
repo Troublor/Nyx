@@ -1,8 +1,8 @@
 Metadata-Version: 2.1
-Name: erebus-supernova
+Name: nyx
 Version: 1.0.0
-Summary: Supernova Project
-Author-email: William Aaron Cheung <reachout@troublor.xyz>
+Summary: Nyx: Detecting Exploitable Front-running Vulnerabilities in Smart Contracts
+Author-email: William Aaron Cheung <github@troublor.xyz>
 Requires-Python: ~=3.10
 Description-Content-Type: text/markdown
 Requires-Dist: crytic-compile
@@ -16,3 +16,4 @@ Requires-Dist: black[d]
 Requires-Dist: web3
 Requires-Dist: networkx
 Requires-Dist: structlog
+Requires-Dist: setuptools
