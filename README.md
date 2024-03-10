@@ -6,6 +6,14 @@ Accpeted at The 45th IEEE Symposium on Security and Privacy (S&P 2024):
 **Disclaimer**: The tool is a research demo and many corner cases are not perfectly handled.
 If you find any not working cases, feel free to post an issue and I will try my best to fix it.
 
+## Technical Overview
+
+Nyx adopts a two-phase analysis for detecting exploitable front-running vulnerabilities (not just transaction-order dependency problems).
+- Phase1: A static pruning is performed on the `hybrid flow graph (HFS)`, which encodes both control and data dependencies across multiple smart contracts under analysis, to quickly filter out those function pairs that do not have any interference with each other (they are not possible to be vulnerable).
+- Phase2: A symbolic validation is conducted using a symbolic execution engine to validate whether an malicious user can front-run users' transactions to make profits and exclude those benign transaction order dependency cases.
+
+Please refer to our paper for detailed explanation.
+
 ## Install dependencies
 
 ```
