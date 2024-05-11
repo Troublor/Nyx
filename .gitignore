@@ -8,8 +8,7 @@ __pycache__/
 # temporary
 dataset*/
 tmp*
-examples*
 playground*
 *.txt
 *.dot
-*.json
+/*.json
